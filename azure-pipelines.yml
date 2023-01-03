@@ -48,9 +48,7 @@ steps:
     configuration: '$(buildConfiguration)'
 
 - task: SonarCloudAnalyze@1
-    sonar.qualitygate.wait=true
-    sonar.qualitygate.timeout=300
-
+  
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
